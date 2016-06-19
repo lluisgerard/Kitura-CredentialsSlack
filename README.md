@@ -49,11 +49,11 @@ router.get("/private/data", handler:
 And call `authenticate` to login with Slack and to handle the redirect (callback) from the Slack login web page after a successful login:
 
 ```swift
-    // SLACK
-    router.get("/login/slack",
-               handler: credentials.authenticate(credentialsType: slackCredentials.name))
-    router.get("/login/slack/callback",
-               handler: credentials.authenticate(credentialsType: slackCredentials.name, failureRedirect: "/login"))
+// SLACK
+router.get("/login/slack",
+           handler: credentials.authenticate(credentialsType: slackCredentials.name))
+router.get("/login/slack/callback",
+           handler: credentials.authenticate(credentialsType: slackCredentials.name, failureRedirect: "/login"))
 ```
 
 ## License
