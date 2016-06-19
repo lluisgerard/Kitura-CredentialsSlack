@@ -18,9 +18,16 @@ The latest version of Kitura-CredentialsSlack works with the DEVELOPMENT-SNAPSHO
 
 ## Example
 A complete sample for other credentials can be found in [Kitura-Credentials-Sample](https://github.com/IBM-Swift/Kitura-Credentials-Sample). I plan to add the Slack example but I totally recommend trying to build and play with that project first before using this module.
+
+I was able to use it inside the complete sample by adding the next line in the dependencies before `swift build` and `swift build -X` (this last one only needed if you want to create an Xcode project):
+
+```
+.Package(url: "https://github.com/lluisgerard/Kitura-CredentialsSlack.git", majorVersion: 0, minor: 1),
+```
 <br>
 
-First create an instance of `CredentialsSlack` plugin and register it with `Credentials` framework:
+To use it, first create an instance of `CredentialsSlack` plugin and register it with `Credentials` framework:
+
 ```swift
 import Credentials
 import CredentialsSlack
